@@ -6,6 +6,7 @@ import ChainOrResponsibility2 from './behavioral/ChainOfResponsibility2';
 import Command from './behavioral/Command';
 import Command2 from './behavioral/Command2';
 import Iterator from './behavioral/Iterator';
+import Mediator from './behavioral/Mediator';
 
 /**
  * Factory Method
@@ -68,4 +69,8 @@ Command2.run();
 console.log(`\n========================`);
 console.log(`\nIterator\n--------------------\n`);
 Iterator.run()
+
+console.log(`\n========================`);
+console.log(`\nMediator\n--------------------\n`);
+Mediator.run()
 
