@@ -92,7 +92,7 @@ class RemoteControll {
 }
 
 export default class {
-    run() {
+    static run() {
         const light = new Light();
         const shutter = new Shutter();
 

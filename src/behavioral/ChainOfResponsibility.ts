@@ -64,7 +64,7 @@ class CapitalizeStringHandler extends AbstractHandler {
 }
 
 export default class ChainOrResponsibility {
-    run() {
+    static run() {
       // links in the chain
         const validValueHandler = new ValidValueHandler();
         const loremReplacer = new LoremReplacer();

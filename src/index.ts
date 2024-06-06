@@ -5,6 +5,7 @@ import ChainOrResponsibility from './behavioral/ChainOfResponsibility';
 import ChainOrResponsibility2 from './behavioral/ChainOfResponsibility2';
 import Command from './behavioral/Command';
 import Command2 from './behavioral/Command2';
+import Iterator from './behavioral/Iterator';
 
 /**
  * Factory Method
@@ -45,13 +46,11 @@ Builder.run()
  */
 console.log(`\n========================`);
 console.log(`\nChain of Responsibility\n--------------------\n`);
-const chain = new ChainOrResponsibility();
-chain.run();
+ChainOrResponsibility.run()
 
 console.log(`\n========================`);
 console.log(`\nChain of Responsibility v2\n--------------------\n`);
-const chain2 = new ChainOrResponsibility2()
-chain2.run()
+ChainOrResponsibility2.run()
 
 /**
  * Command
@@ -60,10 +59,13 @@ chain2.run()
  */
 console.log(`\n========================`);
 console.log(`\nCommand\n--------------------\n`);
-const command = new Command();
-command.run();
+Command.run();
 
 console.log(`\n========================`);
 console.log(`\nCommand 2 - Light version\n--------------------\n`);
-const remoteControll = new Command2();
-remoteControll.run();
+Command2.run();
+
+console.log(`\n========================`);
+console.log(`\nIterator\n--------------------\n`);
+Iterator.run()
+

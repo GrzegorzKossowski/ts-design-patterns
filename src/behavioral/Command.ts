@@ -61,7 +61,7 @@ class Invoker {
 }
 
 export default class {
-    run() {
+    static run() {
         // create invoker
         const invoker = new Invoker();
         // create simple command object

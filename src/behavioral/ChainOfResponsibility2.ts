@@ -56,7 +56,7 @@ class LvlThreeSupport extends BaseHandler {
 }
 
 export default class {
-    run() {
+    static run() {
         const levelOne = new LvlOneSupport();
         const levelTwo = new LvlTwoSupport();
         const levelThree = new LvlThreeSupport();
