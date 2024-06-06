@@ -14,3 +14,8 @@
 ![alt text](./img/image2.png)
 
 
+## Iterator
+
+`Iterator` is a behavioral design pattern that lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).
+
+![alt text](./img/image3.png)
