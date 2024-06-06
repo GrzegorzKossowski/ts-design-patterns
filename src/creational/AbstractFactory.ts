@@ -9,9 +9,9 @@ interface Footmanable {
 }
 
 /**
- * Stwórz mapę poszczególnych typów produktów z uwzględnieniem wariantów 
+ * Stwórz mapę poszczególnych typów produktów z uwzględnieniem wariantów
  * w jakich mogą one być dostępne. Dla każdego typu produktu zaimplementuj
- * abstrakcyjny interfejs. 
+ * abstrakcyjny interfejs.
  */
 class HumanCavlary implements Cavlaryable {
     charge(): void {
@@ -46,20 +46,16 @@ class OrcFootman implements Footmanable {
     }
 }
 
-/**
- * Zadeklaruj interfejs fabryki abstrakcyjnej zawierający zestaw metod
- * kreacyjnych wszystkich produktów abstrakcyjnych.
- */
-interface IAbstractFactory {
+interface AbstractFactory {
     createCavlary(): Cavlaryable;
     createArcher(): Archerable;
     createFootman(): Footmanable;
 }
 /**
- * Zaimplementuj zestaw konkretnych klas fabrycznych — po jednym 
+ * Zaimplementuj zestaw konkretnych klas fabrycznych — po jednym
  * dla każdego wariantu produktu.
  */
-export class HumanFactory implements IAbstractFactory {
+class HumanFactory implements AbstractFactory {
     createCavlary(): Cavlaryable {
         return new HumanCavlary();
     }
@@ -70,7 +66,7 @@ export class HumanFactory implements IAbstractFactory {
         return new HumanFootman();
     }
 }
-export class OrcFactory implements IAbstractFactory {
+class OrcFactory implements AbstractFactory {
     createCavlary(): Cavlaryable {
         return new OrcCavlary();
     }
@@ -82,9 +78,25 @@ export class OrcFactory implements IAbstractFactory {
     }
 }
 
-export default class AbstractFactory {
-    constructor(private _factory: IAbstractFactory) {}
-    createCavlary = this._factory.createCavlary;
-    createArcher = this._factory.createArcher;
-    createFootman = this._factory.createFootman;
+class MainFactory{
+    constructor(private factory: AbstractFactory){}
+    createCavlary = this.factory.createCavlary
+    createArcher = this.factory.createArcher
+    createFootman = this.factory.createFootman
+}
+
+export default class {
+    static run() {
+        let abstractFactory = new MainFactory(new HumanFactory());
+        const humanCavlary = abstractFactory.createCavlary();
+        const humanArcher = abstractFactory.createArcher();
+        humanCavlary.charge();
+        humanArcher.shoot();
+        console.log('+');
+        abstractFactory = new MainFactory(new OrcFactory());
+        const orcCavlary = abstractFactory.createCavlary();
+        const orcFootman = abstractFactory.createFootman();
+        orcCavlary.charge();
+        orcFootman.attack();
+    }
 }

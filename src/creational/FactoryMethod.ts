@@ -30,19 +30,31 @@ abstract class Logistic {
     }
 }
 
-export class RoadLogistic extends Logistic {
+class RoadLogistic extends Logistic {
     create(): Transportable {
         return new Truck();
     }
 }
-export class SeaLogistic extends Logistic {
+class SeaLogistic extends Logistic {
     create(): Transportable {
         return new Ship();
     }
 }
 
-export default class FactoryMethod {
+class FactoryMethod {
     constructor(private logistic: Logistic) {}
     create = this.logistic.create;
     send = this.logistic.sendCargo;
+}
+
+export default class {
+    static run(){
+        let factoryMethod = new FactoryMethod(new RoadLogistic());
+        const truck = factoryMethod.create();
+        factoryMethod.send(truck);
+
+        factoryMethod = new FactoryMethod(new SeaLogistic());
+        const ship = factoryMethod.create();
+        factoryMethod.send(ship);
+    }
 }

@@ -15,13 +15,13 @@ class Manual {
     }
 }
 
-interface IBuilder {
+interface Builder {
     makeChassis(): void;
     makeInterior(): void;
     makeBody(): void;
 }
 
-class CarBuilder implements IBuilder {
+class CarBuilder implements Builder {
     private product: Car = new Car();
     reset() {
         this.product = new Car();
@@ -42,7 +42,7 @@ class CarBuilder implements IBuilder {
         return car;
     }
 }
-class ManualBuilder implements IBuilder {
+class ManualBuilder implements Builder {
     private product: Manual = new Manual();
     reset() {
         this.product = new Manual();
@@ -63,8 +63,8 @@ class ManualBuilder implements IBuilder {
     }
 }
 export class Director {
-    private builder: IBuilder | null = null;
-    setBuilder(builder: IBuilder) {
+    private builder: Builder | null = null;
+    setBuilder(builder: Builder) {
         this.builder = builder;
     }
     /**
@@ -85,17 +85,17 @@ export class Director {
  * initiates the construction process. The end result is retrieved from the
  * builder object.
  */
-export default class Builder {
-    static createCar(director: Director) {
-        let builder = new CarBuilder();
-        director.setBuilder(builder);
+export default class {
+    static run() {
+        const director = new Director();
+        const carBuilder = new CarBuilder();
+        director.setBuilder(carBuilder);
         director.createFullProduct();
-        builder.getCar().listParts();
-    }
-    static createManual(director: Director) {
-        let builder = new ManualBuilder();
-        director.setBuilder(builder);
-        director.createFullProduct();
-        builder.getManual().listPages();
+        carBuilder.getCar().listParts();
+        console.log('+');
+        const manBuilder = new ManualBuilder();
+        director.setBuilder(manBuilder);
+        director.createSmallProduct();
+        manBuilder.getManual().listPages();
     }
 }
