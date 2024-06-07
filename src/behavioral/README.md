@@ -105,3 +105,34 @@ In traditional telephone switchboards, the mediator (switchboard) facilitates co
 
 
 ![Mediator](./img/image4.png)
+
+
+## Memento
+
+The "Memento" design pattern involves storing the state of an object so that it can be restored to that state in the future. This allows for preserving the history of changes to an object and enables operations like undo. Here are several real-world examples of this pattern in use:
+
+### Undo Operations in Text Editors
+
+In text editors, every change to the document (e.g., typing text, deleting a fragment) is saved as a memento object. This allows the user to undo and redo changes, enabling easy restoration of previous versions of the document.
+
+### Saving Game State in Video Games
+
+In video games, the game state (e.g., player position, health level, inventory) is stored as a memento object. This allows players to save their progress and later restore the game state, which is particularly useful for difficult levels or risky actions.
+
+### Managing Configuration in Applications
+
+In applications that allow configuration changes (e.g., user settings, personalization options), the configuration state can be stored as a memento. This allows users to restore previous settings if new changes are undesirable or cause issues.
+
+### Version Control Systems
+
+In version control systems (e.g., Git), each version of a file or set of files is stored as a memento. This allows developers to revert to earlier versions of the code, compare changes, and restore the project state before introducing bugs.
+
+### Database Operations
+
+In databases, before performing critical operations (e.g., mass updates, data deletions), the current state of the data can be saved as a memento. This allows for restoring the data to its previous state in case of errors or unexpected issues after the operation.
+
+![alt text](./img/image5.png)
+
+![Memento 2](./img/image6.png)
+
+

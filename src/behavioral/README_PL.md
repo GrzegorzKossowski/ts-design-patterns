@@ -105,3 +105,28 @@ W tradycyjnych centralach telefonicznych, mediator (centrala) pośredniczy w po�
 
 ![Mediator](./img/image4.png)
 
+Wzorzec projektowy "Memento" polega na przechowywaniu stanu obiektu, aby można było przywrócić go do tego stanu w przyszłości. Pozwala to na zachowanie historii zmian obiektu i umożliwia operacje takie jak cofanie (undo). Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### Operacje Cofania w Edytorach Tekstu
+
+W edytorach tekstu, każda zmiana w dokumencie (np. wprowadzenie tekstu, usunięcie fragmentu) jest zapisywana jako obiekt memento. Dzięki temu użytkownik może cofać i przywracać zmiany, umożliwiając łatwe przywracanie poprzednich wersji dokumentu.
+
+### Zapisywanie Stanu Gry w Grach Komputerowych
+
+W grach komputerowych, stan gry (np. pozycja gracza, poziom zdrowia, inwentarz) jest przechowywany jako obiekt memento. Umożliwia to graczowi zapisywanie postępów i późniejsze przywracanie stanu gry, co jest szczególnie przydatne w przypadku trudnych poziomów lub ryzykownych działań.
+
+### Zarządzanie Konfiguracją w Aplikacjach
+
+W aplikacjach, które umożliwiają zmianę konfiguracji (np. ustawienia użytkownika, opcje personalizacji), stan konfiguracji może być przechowywany jako memento. Umożliwia to użytkownikowi przywracanie poprzednich ustawień w przypadku, gdy nowe zmiany są niepożądane lub powodują problemy.
+
+### Systemy Kontroli Wersji
+
+W systemach kontroli wersji (np. Git), każda wersja pliku lub zestawu plików jest przechowywana jako memento. Umożliwia to programistom cofanie się do wcześniejszych wersji kodu, porównywanie zmian i przywracanie stanu projektu sprzed wprowadzenia błędów.
+
+### Operacje w Bazach Danych
+
+W bazach danych, przed wykonaniem krytycznych operacji (np. masowe aktualizacje, usuwanie danych), aktualny stan danych może być zapisany jako memento. Umożliwia to przywracanie danych do poprzedniego stanu w przypadku wystąpienia błędów lub nieoczekiwanych problemów po operacji.
+
+![Memento 2](./img/image6.png)
+
+![Memento](./img/image5.png)

@@ -7,6 +7,7 @@ import Command from './behavioral/Command';
 import Command2 from './behavioral/Command2';
 import Iterator from './behavioral/Iterator';
 import Mediator from './behavioral/Mediator';
+import Memento from './behavioral/Memento';
 
 /**
  * Factory Method
@@ -74,3 +75,6 @@ console.log(`\n========================`);
 console.log(`\nMediator\n--------------------\n`);
 Mediator.run()
 
+console.log(`\n========================`);
+console.log(`\nMemento\n--------------------\n`);
+Memento.run()
