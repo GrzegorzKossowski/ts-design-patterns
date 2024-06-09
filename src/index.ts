@@ -9,61 +9,36 @@ import Iterator from './behavioral/iterator/Iterator';
 import Mediator from './behavioral/mediator/Mediator';
 import Memento from './behavioral/memento/Memento';
 import Observer from './behavioral/observer/Observer';
+import ObserverEventManager from './behavioral/observer/ObserverEventManager';
 
-/**
- * Factory Method
- * --------------
- * 
- */
+// * Factory Method
 console.log(`\nFactory Method\n--------------------\n`);
 FactoryMethod.run()
 
-/**
- * Abstract Factory
- * ------------------
- * 
- */
+// * Abstract Factory
 console.log(`\n========================`);
 console.log(`\nAbstract Factory\n--------------------\n`);
 AbstractFactory.run()
 
-
-/**
- * Builder
- * --------------
- * 
- */
+// * Builder
 console.log(`\n========================`);
 console.log(`\nBuilder\n--------------------\n`);
 Builder.run()
 
 //===========================================
 // behavioral
-
-/**
- * Chain of Responsibility
- * -----------------------
- * CoR lets you pass requests along a chain of handlers. Upon receiving
- * a request, each handler decides either to process the request or to
- * pass it to the next handler in the chain.
- */
+// * Chain of Responsibility
 console.log(`\n========================`);
 console.log(`\nChain of Responsibility\n--------------------\n`);
 ChainOrResponsibility.run()
-
 console.log(`\n========================`);
 console.log(`\nChain of Responsibility v2\n--------------------\n`);
 ChainOrResponsibility2.run()
 
-/**
- * Command
- * -----------------------
- * 
- */
+// * Command
 console.log(`\n========================`);
 console.log(`\nCommand\n--------------------\n`);
 Command.run();
-
 console.log(`\n========================`);
 console.log(`\nCommand 2 - Light version\n--------------------\n`);
 Command2.run();
@@ -83,5 +58,6 @@ Memento.run()
 console.log(`\n========================`);
 console.log(`\nObserver\n--------------------\n`);
 Observer.run()
-
-
+console.log(`\n========================`);
+console.log(`\nObserver with EventManager\n--------------------\n`);
+ObserverEventManager.run()
