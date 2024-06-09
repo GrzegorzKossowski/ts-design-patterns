@@ -1,13 +1,14 @@
 import AbstractFactory from './creational/AbstractFactory';
 import Builder from './creational/Builder';
 import FactoryMethod from './creational/FactoryMethod';
-import ChainOrResponsibility from './behavioral/ChainOfResponsibility';
-import ChainOrResponsibility2 from './behavioral/ChainOfResponsibility2';
-import Command from './behavioral/Command';
-import Command2 from './behavioral/Command2';
-import Iterator from './behavioral/Iterator';
-import Mediator from './behavioral/Mediator';
-import Memento from './behavioral/Memento';
+import ChainOrResponsibility from './behavioral/chain-of-responsibility/ChainOfResponsibility';
+import ChainOrResponsibility2 from './behavioral/chain-of-responsibility/ChainOfResponsibility2';
+import Command from './behavioral/command/Command';
+import Command2 from './behavioral/command/Command2';
+import Iterator from './behavioral/iterator/Iterator';
+import Mediator from './behavioral/mediator/Mediator';
+import Memento from './behavioral/memento/Memento';
+import Observer from './behavioral/observer/Observer';
 
 /**
  * Factory Method
@@ -78,3 +79,9 @@ Mediator.run()
 console.log(`\n========================`);
 console.log(`\nMemento\n--------------------\n`);
 Memento.run()
+
+console.log(`\n========================`);
+console.log(`\nObserver\n--------------------\n`);
+Observer.run()
+
+

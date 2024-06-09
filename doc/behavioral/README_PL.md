@@ -130,3 +130,37 @@ W bazach danych, przed wykonaniem krytycznych operacji (np. masowe aktualizacje,
 ![Memento 2](./img/image6.png)
 
 ![Memento](./img/image5.png)
+
+
+## Obserwator
+
+Wzorzec projektowy "Obserwator" (Observer) polega na definiowaniu zależności jeden-do-wielu między obiektami, tak aby zmiana stanu jednego obiektu powodowała automatyczne powiadomienie i aktualizację wszystkich zależnych obiektów. Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### System Powiadomień w Aplikacjach Mobilnych
+
+W aplikacjach mobilnych, gdy użytkownik otrzymuje nowe wiadomości, powiadomienia są wysyłane do różnych elementów interfejsu użytkownika (np. ikona aplikacji, pasek powiadomień). Każdy element jest obserwatorem i jest powiadamiany o nowych wiadomościach, aby odpowiednio zaktualizować swój stan.
+
+### Śledzenie Zmian w Arkuszach Kalkulacyjnych
+
+W arkuszach kalkulacyjnych, zmiana wartości jednej komórki może wpływać na inne komórki zależne (np. komórki zawierające formuły). Komórki zależne są obserwatorami i są powiadamiane o zmianach, aby mogły zaktualizować swoje wartości.
+
+### Aktualizacje Kursów Akcji w Aplikacjach Finansowych
+
+W aplikacjach finansowych, inwestorzy mogą subskrybować powiadomienia o zmianach kursów akcji. Gdy kurs akcji się zmienia, wszystkie subskrybowane aplikacje lub komponenty są powiadamiane o zmianie, umożliwiając im natychmiastową aktualizację wyświetlanych danych.
+
+### Systemy Publikacji/Subskrypcji w Mediach Społecznościowych
+
+W mediach społecznościowych, użytkownicy mogą śledzić innych użytkowników i być powiadamiani o ich nowych postach. Każdy obserwator (użytkownik) jest powiadamiany o nowych postach, dzięki czemu może zobaczyć aktualizacje w swoim kanale wiadomości.
+
+### Monitorowanie Stanu Sensorycznego w Systemach IoT
+
+W systemach IoT (Internet of Things), różne sensory mogą monitorować środowisko (np. temperaturę, wilgotność). Gdy sensory wykryją zmiany, powiadamiają o tym centralny system lub inne zależne urządzenia, które są obserwatorami, umożliwiając natychmiastową reakcję na zmiany.
+
+![Observer](./img/image7.png)
+
+Rozszerzona wersja z EventManagerem
+
+![Observer Extended](./img/image8.png)
+
+
+

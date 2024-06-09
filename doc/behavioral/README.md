@@ -136,3 +136,37 @@ In databases, before performing critical operations (e.g., mass updates, data de
 ![Memento 2](./img/image6.png)
 
 
+## Observer
+
+The "Observer" design pattern involves defining a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. Here are several real-world examples of this pattern in use:
+
+### Notification System in Mobile Applications
+
+In mobile applications, when a user receives new messages, notifications are sent to various UI elements (e.g., app icon, notification bar). Each element is an observer and is notified of new messages to update its state accordingly.
+
+### Tracking Changes in Spreadsheets
+
+In spreadsheets, changing the value of one cell can affect other dependent cells (e.g., cells containing formulas). Dependent cells are observers and are notified of changes so they can update their values.
+
+### Stock Price Updates in Financial Applications
+
+In financial applications, investors can subscribe to notifications about stock price changes. When a stock price changes, all subscribed applications or components are notified, allowing them to immediately update the displayed data.
+
+### Publish/Subscribe Systems in Social Media
+
+In social media, users can follow other users and be notified of their new posts. Each observer (user) is notified of new posts, allowing them to see updates in their news feed.
+
+### Monitoring Sensor Status in IoT Systems
+
+In IoT (Internet of Things) systems, various sensors monitor the environment (e.g., temperature, humidity). When sensors detect changes, they notify a central system or other dependent devices, which are observers, allowing for immediate response to changes.
+
+![Observer](./img/image7.png)
+
+Extended version with EventManager
+
+![Observer Extended](./img/image8.png)
+
+
+
+
+
