@@ -238,4 +238,28 @@ W aplikacjach, które muszą kompresować dane, można zastosować różne algor
 
 ## Template Method
 
+Wzorzec projektowy "Metoda Szablonowa" (Template Method) definiuje szkielet algorytmu w metodzie, pozostawiając niektóre kroki do zaimplementowania w podklasach. Wzorzec ten pozwala podklasom na redefinicję pewnych kroków algorytmu bez zmiany jego struktury. Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### Przetwarzanie Dokumentów
+
+W aplikacjach do przetwarzania dokumentów, takich jak generatory raportów, można zdefiniować ogólny szkielet algorytmu przetwarzania (np. otwarcie dokumentu, przetwarzanie zawartości, zapisanie dokumentu). Konkretne implementacje przetwarzania zawartości (np. formatowanie tekstu, dodawanie nagłówków i stopek) mogą być zrealizowane w podklasach.
+
+### Algorytmy Sortowania
+
+W przypadku algorytmów sortowania, można zdefiniować szkielet metody sortowania, który obejmuje kroki takie jak podział danych, sortowanie podzbiorów i scalanie wyników. Konkretne strategie podziału i sortowania (np. sortowanie szybkie, sortowanie przez scalanie) mogą być zaimplementowane w podklasach.
+
+### Szablony Testów Jednostkowych
+
+W testach jednostkowych, można zdefiniować szablon testu, który zawiera kroki takie jak inicjalizacja środowiska testowego, wykonanie testu i sprawdzanie wyników. Konkretne testy dla różnych funkcjonalności mogą być zaimplementowane w podklasach, które szczegółowo definiują, jak te kroki są wykonywane.
+
+### Proces Zatrudniania
+
+W systemach zarządzania zasobami ludzkimi, można zdefiniować ogólny proces zatrudniania, który obejmuje kroki takie jak przeglądanie CV, przeprowadzanie rozmów kwalifikacyjnych i podejmowanie decyzji. Konkretne kroki, takie jak sposób przeprowadzania rozmów kwalifikacyjnych, mogą być zaimplementowane w podklasach dla różnych typów stanowisk.
+
+### Przygotowanie Potraw w Restauracji
+
+W kuchni restauracyjnej, można zdefiniować szkielet przepisu, który obejmuje kroki takie jak przygotowanie składników, gotowanie i prezentacja dania. Konkretne przepisy dla różnych potraw (np. zupa, danie główne, deser) mogą być zaimplementowane w podklasach, które szczegółowo określają, jak każdy z tych kroków jest wykonywany.
+
+![Template Method](./img/image11.png)
+
 ## Visitor

@@ -234,4 +234,6 @@ In applications that need to compress data, various compression algorithms can b
 
 ## Template Method
 
+![Template Method](./img/image11.png)
+
 ## Visitor

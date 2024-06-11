@@ -12,6 +12,7 @@ import Observer from './behavioral/observer/Observer';
 import ObserverEventManager from './behavioral/observer/ObserverEventManager';
 import State from './behavioral/state/State';
 import Strategy from './behavioral/strategy/Strategy';
+import TemplateMethod from './behavioral/template-method/TemplateMethod';
 
 // * Factory Method
 console.log(`\nFactory Method\n--------------------\n`);
@@ -71,4 +72,8 @@ State.run()
 console.log(`\n========================`);
 console.log(`\nStrategy\n--------------------\n`);
 Strategy.run()
+
+console.log(`\n========================`);
+console.log(`\nTemplate Method\n--------------------\n`);
+TemplateMethod.run()
 
