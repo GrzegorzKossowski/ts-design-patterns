@@ -1,5 +1,3 @@
-import { log } from 'console';
-
 interface Iterator<T> {
     next(): T | null;
     hasNext(): boolean;

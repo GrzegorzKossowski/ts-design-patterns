@@ -234,6 +234,32 @@ In applications that need to compress data, various compression algorithms can b
 
 ## Template Method
 
+The "Template Method" design pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. This pattern allows subclasses to redefine certain steps of the algorithm without changing its structure. Here are several real-world examples of this pattern in use:
+
+### Document Processing
+
+In document processing applications, such as report generators, you can define a general skeleton of the processing algorithm (e.g., opening the document, processing the content, saving the document). Specific implementations of content processing (e.g., text formatting, adding headers and footers) can be realized in subclasses.
+
+### Sorting Algorithms
+
+For sorting algorithms, you can define the skeleton of the sorting method, which includes steps like dividing data, sorting subsets, and merging results. Specific strategies for division and sorting (e.g., quicksort, mergesort) can be implemented in subclasses.
+
+### Unit Test Templates
+
+In unit testing, you can define a test template that includes steps like initializing the test environment, executing the test, and verifying the results. Specific tests for different functionalities can be implemented in subclasses, which detail how these steps are performed.
+
+### Hiring Process
+
+In human resource management systems, you can define a general hiring process that includes steps like reviewing resumes, conducting interviews, and making decisions. Specific steps, such as the method of conducting interviews, can be implemented in subclasses for different job positions.
+
+### Cooking Recipes in a Restaurant
+
+In a restaurant kitchen, you can define the skeleton of a recipe that includes steps like preparing ingredients, cooking, and presenting the dish. Specific recipes for different dishes (e.g., soup, main course, dessert) can be implemented in subclasses, which detail how each of these steps is performed.
+
 ![Template Method](./img/image11.png)
 
 ## Visitor
+
+<!-- // TODO:  -->
+
+![Visitor](./img/image12.png)

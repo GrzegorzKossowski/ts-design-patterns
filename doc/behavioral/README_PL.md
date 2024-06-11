@@ -263,3 +263,7 @@ W kuchni restauracyjnej, można zdefiniować szkielet przepisu, który obejmuje 
 ![Template Method](./img/image11.png)
 
 ## Visitor
+
+<!-- // TODO:  -->
+
+![Visitor](./img/image12.png)
