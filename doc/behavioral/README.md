@@ -1,5 +1,25 @@
 # Behavioral patterns
 
+[Chain of Responsibility](##_Chain_of_Responsibility)
+
+[Command](##_Command)
+
+[Iterator](##_Iterator)
+
+[Mediator](##_Mediator)
+
+[Memento](##_Memento)
+
+[Observer](##_Observer)
+
+[State](##_State)
+
+[Strategy](##_Strategy)
+
+[Template Method](##_Template_Method)
+
+[Visitor](##_Visitor)
+
 ## Chain of Responsibility
 
 ### Help Desk Ticketing System
@@ -18,13 +38,11 @@ In web applications, HTTP requests are often processed by a chain of filters or 
 
 In applications that interpret user commands (e.g., text editors, graphic software), each command is passed through a chain of objects that handle different types of commands. Each object checks if it can handle the given command and, if not, passes it to the next object in the chain.
 
-
 ### Request Authorization in Security Systems
 
 In security systems, access requests to resources are passed through a chain of authorization policies. Each policy checks if it meets certain authorization criteria and, if so, grants access. If not, the request is passed to the next policy in the chain.
 
 ![alt text](./img/image1.png)
-
 
 ## Command
 
@@ -51,7 +69,6 @@ In desktop applications, actions triggered by the user interface (e.g., button c
 In queueing systems, each task (e.g., file processing, sending an email) is represented as a Command object. This facilitates easy queuing, prioritizing, and retrying tasks, ensuring flexible and reliable processing.
 
 ![alt text](./img/image2.png)
-
 
 ## Iterator
 
@@ -103,9 +120,7 @@ In applications composed of many independent modules, a mediator can manage inte
 
 In traditional telephone switchboards, the mediator (switchboard) facilitates connections between subscribers. Instead of subscribers connecting directly, the switchboard routes calls, managing communication and enabling additional features like call forwarding and conferencing.
 
-
 ![Mediator](./img/image4.png)
-
 
 ## Memento
 
@@ -134,7 +149,6 @@ In databases, before performing critical operations (e.g., mass updates, data de
 ![alt text](./img/image5.png)
 
 ![Memento 2](./img/image6.png)
-
 
 ## Observer
 
@@ -166,7 +180,58 @@ Extended version with EventManager
 
 ![Observer Extended](./img/image8.png)
 
+## State
 
+The "State" design pattern allows an object to change its behavior when its internal state changes. The object appears to change its class. Here are several real-world examples of this pattern in use:
 
+### Vending Machine
 
+A vending machine can be in different states (e.g., no coin, coin inserted, product dispensed). Each state changes how the machine operates. For example, when in the "no coin" state, it won't dispense a product, but after a coin is inserted, it transitions to the "coin inserted" state and allows product selection.
 
+### Document in a Workflow Process
+
+A document in a workflow management application can transition through various states (e.g., draft, in review, approved). Each state determines what actions are possible (e.g., a document in the "draft" state can be edited but not yet published).
+
+### Character in a Video Game
+
+A character in a video game can have different states (e.g., healthy, injured, dead). In each state, the character behaves differently—when healthy, it can run and fight; when injured, it may move slower; and when dead, it cannot perform any actions.
+
+### Network Connection Management
+
+In network applications, a connection can be in different states (e.g., connecting, connected, disconnected). Each state defines what operations are allowed—while "connecting," it can attempt to establish a connection; when "connected," it can transmit data; and when "disconnected," it can attempt to reconnect.
+
+### Order Process in an Online Store
+
+The order process in an online store can go through various states (e.g., new, processing, shipped, delivered). Each state changes the available options for the customer—a new order can be canceled, a processing order can be tracked, and a delivered order can be reviewed.
+
+![State](./img/image9.png)
+
+## Strategy
+
+The "Strategy" design pattern allows you to define a family of algorithms, encapsulate each one in a separate class, and make them interchangeable. This way, the client can choose which algorithm to use at runtime. Here are several real-world examples of this pattern in use:
+
+### Data Sorting
+
+In applications that need to sort data, various sorting algorithms can be implemented (e.g., bubble sort, insertion sort, quick sort). The "Strategy" pattern allows these algorithms to be stored as separate classes and dynamically chosen based on the needs and conditions, such as the size of the data set or performance requirements.
+
+### Payment Methods in Online Stores
+
+Online stores can offer different payment methods (e.g., credit card, PayPal, bank transfer). Each payment method is implemented as a separate class, and the "Strategy" pattern allows the customer to select their preferred payment method during the checkout process.
+
+### Image Composition in Graphic Applications
+
+In graphic applications, various image composition strategies can be used (e.g., transparency, overlay, blending). The "Strategy" pattern allows the user to choose which composition technique to apply during image editing, changing the algorithm at runtime.
+
+### Route Optimization in GPS Navigation
+
+In navigation applications, different strategies for route calculation can be used (e.g., shortest route, fastest route, route avoiding highways). Each strategy is implemented as a separate class, and the "Strategy" pattern allows the user to select their preferred route calculation method.
+
+### Data Compression
+
+In applications that need to compress data, various compression algorithms can be used (e.g., ZIP, RAR, 7z). The "Strategy" pattern allows these algorithms to be stored as separate classes and dynamically chosen based on user needs or file specifications.
+
+![Stratety](./img/image10.png)
+
+## Template Method
+
+## Visitor

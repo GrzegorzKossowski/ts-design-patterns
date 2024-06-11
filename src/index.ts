@@ -10,6 +10,8 @@ import Mediator from './behavioral/mediator/Mediator';
 import Memento from './behavioral/memento/Memento';
 import Observer from './behavioral/observer/Observer';
 import ObserverEventManager from './behavioral/observer/ObserverEventManager';
+import State from './behavioral/state/State';
+import Strategy from './behavioral/strategy/Strategy';
 
 // * Factory Method
 console.log(`\nFactory Method\n--------------------\n`);
@@ -61,3 +63,12 @@ Observer.run()
 console.log(`\n========================`);
 console.log(`\nObserver with EventManager\n--------------------\n`);
 ObserverEventManager.run()
+
+console.log(`\n========================`);
+console.log(`\nState\n--------------------\n`);
+State.run()
+
+console.log(`\n========================`);
+console.log(`\nStrategy\n--------------------\n`);
+Strategy.run()
+

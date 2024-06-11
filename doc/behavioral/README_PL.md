@@ -1,5 +1,25 @@
 # Behavioral patterns
 
+[Chain of Responsibility](##_Chain_of_Responsibility)
+
+[Command](##_Command)
+
+[Iterator](##_Iterator)
+
+[Mediator](##_Mediator)
+
+[Memento](##_Memento)
+
+[Observer](##_Observer)
+
+[State](##_State)
+
+[Strategy](##_Strategy)
+
+[Template Method](##_Template_Method)
+
+[Visitor](##_Visitor)
+
 ## Chain of Responsibility
 
 Wzorzec projektowy "Chain of Responsibility" polega na przekazywaniu żądań przez łańcuch odbiorców, aż jedno z nich obsłuży żądanie. Oto kilka realnych przykładów zastosowania tego wzorca:
@@ -78,7 +98,6 @@ Po wykonaniu zapytania do bazy danych, iterator może być używany do przechodz
 
 ![Iterator](./img/image3.png)
 
-
 ## Mediator
 
 Wzorzec projektowy "Mediator" definiuje obiekt, który enkapsuluje sposób, w jaki zestaw obiektów współdziała. Wzorzec ten promuje luźne powiązania, zapobiegając bezpośredniej komunikacji między obiektami i pozwalając na niezależne zmiany w ich interakcji. Oto kilka realnych przykładów zastosowania tego wzorca:
@@ -104,6 +123,8 @@ W aplikacjach, które składają się z wielu niezależnych modułów, mediator 
 W tradycyjnych centralach telefonicznych, mediator (centrala) pośredniczy w połączeniach między abonentami. Zamiast abonenci łączyli się bezpośrednio, centrala przełącza połączenia, zarządzając komunikacją i umożliwiając dodatkowe funkcje, takie jak przekierowywanie połączeń i konferencje.
 
 ![Mediator](./img/image4.png)
+
+## Memento
 
 Wzorzec projektowy "Memento" polega na przechowywaniu stanu obiektu, aby można było przywrócić go do tego stanu w przyszłości. Pozwala to na zachowanie historii zmian obiektu i umożliwia operacje takie jak cofanie (undo). Oto kilka realnych przykładów zastosowania tego wzorca:
 
@@ -131,8 +152,7 @@ W bazach danych, przed wykonaniem krytycznych operacji (np. masowe aktualizacje,
 
 ![Memento](./img/image5.png)
 
-
-## Obserwator
+## Observer
 
 Wzorzec projektowy "Obserwator" (Observer) polega na definiowaniu zależności jeden-do-wielu między obiektami, tak aby zmiana stanu jednego obiektu powodowała automatyczne powiadomienie i aktualizację wszystkich zależnych obiektów. Oto kilka realnych przykładów zastosowania tego wzorca:
 
@@ -163,4 +183,59 @@ Rozszerzona wersja z EventManagerem
 ![Observer Extended](./img/image8.png)
 
 
+## State
 
+Wzorzec projektowy "State" pozwala obiektowi zmieniać swoje zachowanie w zależności od jego wewnętrznego stanu. Obiekt wygląda jakby zmieniał swoją klasę. Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### Automat Sprzedający
+
+Automat sprzedający może znajdować się w różnych stanach (np. bez monety, moneta wrzucona, produkt wydany). Każdy stan zmienia sposób działania automatu. Na przykład, gdy jest w stanie "bez monety", nie wyda produktu, a po wrzuceniu monety przechodzi do stanu "moneta wrzucona" i pozwala na wybór produktu.
+
+### Dokument w Procesie Pracy
+
+Dokument w aplikacji do zarządzania przepływem pracy może przechodzić przez różne stany (np. szkic, w recenzji, zaakceptowany). Każdy stan określa, jakie akcje są możliwe do wykonania (np. dokument w stanie "szkic" można edytować, ale nie można go jeszcze publikować).
+
+### Postać w Grze Komputerowej
+
+Postać w grze komputerowej może mieć różne stany (np. zdrowy, zraniony, martwy). W każdym stanie postać zachowuje się inaczej - zdrowa może biegać i walczyć, zraniona może poruszać się wolniej, a martwa nie może wykonywać żadnych akcji.
+
+### Zarządzanie Połączeniem w Sieci
+
+W aplikacjach sieciowych połączenie może znajdować się w różnych stanach (np. łączenie, połączone, rozłączone). Każdy stan definiuje, jakie operacje są dozwolone - w stanie "łączenie" można próbować nawiązać połączenie, w stanie "połączone" można przesyłać dane, a w stanie "rozłączone" można ponownie próbować połączyć.
+
+### Proces Zamówienia w Sklepie Internetowym
+
+Proces zamówienia w sklepie internetowym może przechodzić przez różne stany (np. nowe, przetwarzane, wysłane, dostarczone). Każdy stan zmienia dostępne opcje dla klienta - nowe zamówienie można anulować, przetwarzane zamówienie można śledzić, a dostarczone zamówienie można ocenić.
+
+![State](./img/image9.png)
+
+## Strategy
+
+Wzorzec projektowy "Strategia" (Strategy) pozwala zdefiniować rodzinę algorytmów, umieścić je w osobnych klasach i uczynić je wymiennymi. Dzięki temu klient może wybierać algorytm, którego chce użyć, w czasie działania programu. Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### Sortowanie Danych
+
+W aplikacjach, które muszą sortować dane, można zaimplementować różne algorytmy sortowania (np. sortowanie bąbelkowe, sortowanie przez wstawianie, sortowanie szybkie). Wzorzec "Strategia" pozwala przechowywać te algorytmy jako osobne klasy i dynamicznie wybierać odpowiedni algorytm sortowania w zależności od potrzeb i warunków, takich jak rozmiar danych czy wymagania dotyczące wydajności.
+
+### Metody Płatności w Sklepach Internetowych
+
+W sklepach internetowych można zaoferować różne metody płatności (np. karta kredytowa, PayPal, przelew bankowy). Każda metoda płatności jest zaimplementowana jako osobna klasa, a wzorzec "Strategia" pozwala klientowi wybrać preferowaną metodę płatności podczas składania zamówienia.
+
+### Kompozycja Obrazu w Aplikacjach Graficznych
+
+W aplikacjach graficznych można mieć różne strategie kompozycji obrazu (np. przezroczystość, nakładanie, mieszanie). Wzorzec "Strategia" pozwala użytkownikowi wybrać, która technika kompozycji ma być używana podczas edycji obrazu, zmieniając algorytm w czasie działania programu.
+
+### Optymalizacja Trasy w Nawigacji GPS
+
+W aplikacjach nawigacyjnych można zastosować różne strategie wyznaczania trasy (np. najkrótsza trasa, najszybsza trasa, trasa z omijaniem autostrad). Każda strategia jest zaimplementowana jako osobna klasa, a wzorzec "Strategia" umożliwia użytkownikowi wybór preferowanej metody wyznaczania trasy.
+
+### Kompresja Danych
+
+W aplikacjach, które muszą kompresować dane, można zastosować różne algorytmy kompresji (np. ZIP, RAR, 7z). Wzorzec "Strategia" pozwala przechowywać te algorytmy jako osobne klasy i dynamicznie wybierać odpowiedni algorytm kompresji w zależności od potrzeb użytkownika lub specyfikacji plików.
+
+
+![Stratety](./img/image10.png)
+
+## Template Method
+
+## Visitor
