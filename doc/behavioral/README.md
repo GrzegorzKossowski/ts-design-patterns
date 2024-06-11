@@ -1,24 +1,24 @@
 # Behavioral patterns
 
-[Chain of Responsibility](##_Chain_of_Responsibility)
+[Chain of Responsibility](#chain-of-responsibility)
 
-[Command](##_Command)
+[Command](#command)
 
-[Iterator](##_Iterator)
+[Iterator](#iterator)
 
-[Mediator](##_Mediator)
+[Mediator](#mediator)
 
-[Memento](##_Memento)
+[Memento](#memento)
 
-[Observer](##_Observer)
+[Observer](#observer)
 
-[State](##_State)
+[State](#state)
 
-[Strategy](##_Strategy)
+[Strategy](#strategy)
 
-[Template Method](##_Template_Method)
+[Template Method](#template-method)
 
-[Visitor](##_Visitor)
+[Visitor](#visitor)
 
 ## Chain of Responsibility
 
