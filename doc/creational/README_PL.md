@@ -114,4 +114,27 @@ W systemach zarządzania projektami można szybko tworzyć nowe projekty przez k
 
 # Singleton
 
-`Singleton` 
+`Singleton` zapewnia, że klasa ma tylko jedną instancję i udostępnia globalny punkt dostępu do tej instancji. Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### Zarządzanie Połączeniem z Bazą Danych
+
+W aplikacjach korzystających z baz danych, Singleton jest często używany do zarządzania połączeniem z bazą danych. Zapewnia to, że w całej aplikacji istnieje tylko jedno połączenie z bazą danych, co pomaga zapobiegać problemom związanym z wielokrotnymi połączeniami i zarządzaniem zasobami.
+
+### Konfiguracja Systemu
+
+W wielu aplikacjach istnieje potrzeba zarządzania globalną konfiguracją, która jest dostępna dla różnych części aplikacji. Singleton może być używany do zarządzania konfiguracją systemu, zapewniając, że wszystkie moduły aplikacji korzystają z tych samych ustawień.
+
+### Logowanie
+
+W systemach logowania, Singleton może być używany do zarządzania zapisywaniem logów. Umożliwia to centralne zarządzanie logowaniem, zapewniając, że wszystkie wiadomości logów są zapisywane przez jeden wspólny obiekt logujący.
+
+### Cache Aplikacji
+
+Singleton może być używany do zarządzania cache'em aplikacji, zapewniając dostęp do jednego, wspólnego zasobu cache. Dzięki temu różne części aplikacji mogą wspólnie korzystać z tych samych danych cache, co poprawia wydajność i spójność.
+
+### Zarządzanie Sesjami
+
+W aplikacjach internetowych Singleton może być używany do zarządzania sesjami użytkowników. Umożliwia to centralne zarządzanie informacjami o sesjach, co jest szczególnie przydatne w kontekście aplikacji o dużej skali, gdzie konieczne jest utrzymanie spójności sesji użytkowników.
+
+
+![Singleton](./img/image5.png)
