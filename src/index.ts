@@ -13,7 +13,11 @@ import ObserverEventManager from './behavioral/observer/ObserverEventManager';
 import State from './behavioral/state/State';
 import Strategy from './behavioral/strategy/Strategy';
 import TemplateMethod from './behavioral/template-method/TemplateMethod';
+import Prototype from './creational/Prototype';
+import Singleton from './creational/Singleton';
 
+//===========================================
+// creational
 // * Factory Method
 console.log(`\nFactory Method\n--------------------\n`);
 FactoryMethod.run()
@@ -28,6 +32,17 @@ console.log(`\n========================`);
 console.log(`\nBuilder\n--------------------\n`);
 Builder.run()
 
+// * nPrototype
+console.log(`\n========================`);
+console.log(`\nPrototype\n--------------------\n`);
+Prototype.run()
+
+// * Singleton
+console.log(`\n========================`);
+console.log(`\nSingleton\n--------------------\n`);
+Singleton.run()
+
+/**/
 //===========================================
 // behavioral
 // * Chain of Responsibility
@@ -76,4 +91,4 @@ Strategy.run()
 console.log(`\n========================`);
 console.log(`\nTemplate Method\n--------------------\n`);
 TemplateMethod.run()
-
+/**/
