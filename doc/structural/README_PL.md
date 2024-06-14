@@ -120,11 +120,53 @@ W aplikacjach do edycji tekstu różne formaty (np. pogrubienie, kursywa, podkre
 
 ## Facade
 
-`Facade`
+`Facade`upraszcza dostęp do złożonego systemu poprzez dostarczenie uproszczonego interfejsu. Pozwala to na łatwiejsze korzystanie z systemu bez konieczności znajomości jego wewnętrznych szczegółów. Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### Systemy Podsystemów w Aplikacjach
+
+W dużych aplikacjach, które składają się z wielu podsystemów (np. moduł logowania, moduł płatności, moduł zarządzania użytkownikami), wzorzec "Fasada" może być używany do dostarczania uproszczonego interfejsu do tych podsystemów. Dzięki temu użytkownicy mogą łatwo korzystać z funkcji aplikacji bez konieczności znajomości szczegółów implementacji każdego podsystemu.
+
+### Biblioteki Graficzne
+
+W bibliotekach graficznych, które oferują różnorodne funkcje do renderowania grafiki (np. rysowanie kształtów, zarządzanie teksturami, obsługa animacji), wzorzec "Fasada" może dostarczać uproszczony interfejs do najczęściej używanych funkcji. Dzięki temu programiści mogą łatwiej tworzyć aplikacje graficzne bez konieczności zagłębiania się w szczegóły każdej funkcji biblioteki.
+
+### Systemy Operacyjne
+
+W systemach operacyjnych, które zarządzają różnorodnymi zasobami (np. pliki, procesy, pamięć), wzorzec "Fasada" może dostarczać uproszczony interfejs do zarządzania tymi zasobami. Dzięki temu użytkownicy mogą łatwo wykonywać operacje systemowe bez konieczności znajomości szczegółów implementacji systemu operacyjnego.
+
+### Integracja z Zewnętrznymi Usługami
+
+W aplikacjach, które integrują się z wieloma zewnętrznymi usługami (np. usługi pogodowe, serwisy społecznościowe, systemy płatności), wzorzec "Fasada" może dostarczać jednolity i uproszczony interfejs do komunikacji z tymi usługami. Dzięki temu programiści mogą łatwiej zarządzać integracją zewnętrznych usług bez konieczności znajomości szczegółów każdego API.
+
+### Systemy Zarządzania Treścią (CMS)
+
+W systemach zarządzania treścią, które oferują różnorodne funkcje (np. tworzenie i edycja treści, zarządzanie użytkownikami, analityka), wzorzec "Fasada" może dostarczać uproszczony interfejs do najczęściej używanych funkcji. Dzięki temu użytkownicy mogą łatwiej korzystać z systemu CMS bez konieczności znajomości szczegółów implementacji każdej funkcji.
 
 ![Facade](./img/image5.png)
 
 ## Flyweight
+
+`Flyweight` umożliwia efektywne zarządzanie wieloma obiektami o małej granulacji poprzez współdzielenie wspólnych cech. Pozwala to na oszczędność pamięci i zasobów systemowych poprzez ponowne wykorzystanie istniejących obiektów, zamiast tworzenia nowych instancji dla każdego żądania. Oto kilka realnych przykładów zastosowania tego wzorca:
+
+### Tekst i Formatowanie w Edytorze Tekstu
+
+W edytorach tekstowych, gdzie duża liczba tekstu wymaga różnych formatowań (np. różne czcionki, kolory, style), wzorzec "Flyweight" może być stosowany do efektywnego zarządzania tymi formatowaniami. Współdzielone obiekty "Flyweight" przechowują wspólne właściwości (np. styl czcionki) i są ponownie używane w różnych częściach tekstu.
+
+### Grafika Komputerowa
+
+W aplikacjach graficznych, gdzie wiele obiektów (np. kształty, tekstury) może mieć wspólne cechy (np. kolor, tekstura), wzorzec "Flyweight" pozwala na współdzielenie tych cech między obiektami. Na przykład, współdzielony obiekt "Flyweight" może przechowywać informacje o wspólnym kolorze, które są używane przez wiele różnych obiektów w scenie.
+
+### Systemy Zarządzania Pamięcią
+
+W systemach operacyjnych lub silnikach gier, które zarządzają pamięcią, wzorzec "Flyweight" może być stosowany do efektywnego zarządzania obiektami, które są często tworzone i niszczone. Współdzielone obiekty "Flyweight" mogą być ponownie używane, aby zmniejszyć narzut związany z częstym tworzeniem i usuwaniem obiektów.
+
+### Systemy Przechowywania Danych
+
+W systemach przechowujących duże ilości danych (np. bazy danych, systemy plików), wzorzec "Flyweight" może być stosowany do efektywnego zarządzania danymi, które są często powtarzające się. Na przykład, współdzielone obiekty "Flyweight" mogą reprezentować unikalne wartości (np. klucze, słowa kluczowe), które są współdzielone między wieloma rekordami lub plikami.
+
+### Systemy Cache
+
+W systemach cache'owania, gdzie często potrzebujemy przechowywać i szybko odczytywać dane (np. wyniki zapytań, obliczone wartości), wzorzec "Flyweight" może być stosowany do zarządzania współdzielonymi obiektami cache, które mogą być ponownie używane. To pozwala na szybsze odpowiedzi na powtarzające się żądania.
 
 ![Flyweight](./img/image6.png)
 
