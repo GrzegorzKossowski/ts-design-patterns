@@ -1,5 +1,3 @@
-import { prototype } from "events";
-
 interface Cloneable {
   clone(): Prototype;
 }

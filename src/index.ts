@@ -1,6 +1,6 @@
-import AbstractFactory from './creational/AbstractFactory';
-import Builder from './creational/Builder';
-import FactoryMethod from './creational/FactoryMethod';
+import AbstractFactory from './creational/abstract-factory/AbstractFactory';
+import Builder from './creational/builder/Builder';
+import FactoryMethod from './creational/factory-method/FactoryMethod';
 import ChainOrResponsibility from './behavioral/chain-of-responsibility/ChainOfResponsibility';
 import ChainOrResponsibility2 from './behavioral/chain-of-responsibility/ChainOfResponsibility2';
 import Command from './behavioral/command/Command';
@@ -13,11 +13,17 @@ import ObserverEventManager from './behavioral/observer/ObserverEventManager';
 import State from './behavioral/state/State';
 import Strategy from './behavioral/strategy/Strategy';
 import TemplateMethod from './behavioral/template-method/TemplateMethod';
-import Prototype from './creational/Prototype';
-import Singleton from './creational/Singleton';
+import Prototype from './creational/prototype/Prototype';
+import Singleton from './creational/singleton/Singleton';
+import Adapter from './structural/adapter/Adapter';
+import Bridge from './structural/bridge/Bridge';
+import RemoteDevice from './structural/bridge/RemoteDevice';
+import Decorator from './structural/decorator/Decorator';
+import Facade from './structural/facade/Facade';
+import Proxy from './structural/proxy/Proxy';
 
 //===========================================
-// creational
+console.log('CREATIONAL');
 // * Factory Method
 console.log(`\nFactory Method\n--------------------\n`);
 FactoryMethod.run()
@@ -44,7 +50,42 @@ Singleton.run()
 
 /**/
 //===========================================
-// behavioral
+console.log('STRUCTURAL');
+// * Adapter
+console.log(`\n========================`);
+console.log(`\nAdapter\n--------------------\n`);
+Adapter.run()
+
+// * Bridge
+console.log(`\n========================`);
+console.log(`\nBridge\n--------------------\n`);
+Bridge.run()
+console.log('------------------ Remote <-> Device');
+RemoteDevice.run()
+
+// * Decorator
+console.log(`\n========================`);
+console.log(`\nDecorator\n--------------------\n`);
+Decorator.run()
+
+// * Facade
+console.log(`\n========================`);
+console.log(`\nFacade\n--------------------\n`);
+Facade.run()
+
+// * Flyweight
+// TODO: here
+
+// * Proxy
+console.log(`\n========================`);
+console.log(`\nFacade\n--------------------\n`);
+Proxy.run()
+
+
+
+/**
+//===========================================
+console.log('BEHAVIORAL');
 // * Chain of Responsibility
 console.log(`\n========================`);
 console.log(`\nChain of Responsibility\n--------------------\n`);
